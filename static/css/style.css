@@ -1,0 +1,86 @@
+body {
+    transition: background-color 0.3s, color 0.3s;
+    font-family: Arial, sans-serif;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .navbar {
+    background-color: #333 !important;
+    border-color: #555;
+}
+
+.dark-mode .navbar .navbar-brand,
+.dark-mode .navbar .nav-link {
+    color: white !important;
+}
+
+.dark-mode .btn-outline-secondary {
+    border-color: white;
+    color: white;
+}
+
+.dark-mode .btn-outline-secondary:hover {
+    background-color: white;
+    color: black;
+}
+
+#eventEffects {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.snowball {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+    from {
+        top: -10px;
+        left: 0%;
+    }
+    to {
+        top: 100vh;
+        left: 100%;
+    }
+}
+
+.firework {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: red;
+    border-radius: 50%;
+    animation: explode 2s ease-out infinite;
+}
+
+@keyframes explode {
+    0% { transform: scale(0); opacity: 1; }
+    50% { transform: scale(2); opacity: 0.8; }
+    100% { transform: scale(0); opacity: 0; }
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.btn {
+    border-radius: 5px;
+}
+
+.form-control {
+    border-radius: 5px;
+}
